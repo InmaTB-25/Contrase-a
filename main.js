@@ -8,6 +8,13 @@ function login(evento) {
     const user = userInput.value;
     alert(`hola a ${user}`);
 }
+userInput.addEventListener("input", ()=> {
+    if (userInput.value.length > 0) {
+        botonLogin.removeAttribute('disabled')
+        } else {
+            botonLogin.setAttribute('disabled', 'true')
+            }
+})
 
 passwordInput.addEventListener("input", () => {
     const password = passwordInput.value;
